@@ -2,16 +2,21 @@
   <div class="events">
     <EventCard v-for="event in events" :key="event.id" :event="event" />
   </div>
+  <hr />
+  <div class="organize">
+    <OrganizerCard v-for="event in events" :key="event.id" :value="event" />
+  </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import EventCard from "@/components/EventCard.vue"
-
+import OrganizerCard from "@/components/OrganizerCard.vue"
 export default {
   name: "Home",
   components: {
-    EventCard
+    EventCard,
+    OrganizerCard
   },
   data() {
     return {
@@ -56,6 +61,11 @@ export default {
 </script>
 <style scoped>
 .events {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.organize {
   display: flex;
   flex-direction: column;
   align-items: center;
