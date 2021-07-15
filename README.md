@@ -1,5 +1,10 @@
 # compo-lab03
 
+## This lab topic
+- component props
+- router/view
+- axios for fetching api
+
 ## Project setup
 ```
 npm install
@@ -19,6 +24,3 @@ npm run build
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
