@@ -1,28 +1,28 @@
 <template>
-  <h1>Organizer List only</h1>
+  <h1>List of all Student</h1>
   <hr />
   <div class="organize">
-    <OrganizerCard v-for="event in events" :key="event.id" :value="event" />
+    <StudentCard v-for="item in students" :key="item.id" :student="item" />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import OrganizerCard from "@/components/OrganizerCard.vue"
-import EventService from "@/service/EventService.js"
+import StudentCard from "@/components/StudentCard.vue"
+import StudentAPI from "@/service/StudentAPI.js"
 export default {
   name: "OrganizerOnly",
   components: {
-    OrganizerCard
+    StudentCard
   },
   data() {
     return {
-      events: null
+      students: null
     }
   },
   created() {
-    EventService.getEvents().then((res) => {
-      this.events = res.data
+    StudentAPI.getStudent().then((res) => {
+      this.students = res.data
     })
   }
 }
