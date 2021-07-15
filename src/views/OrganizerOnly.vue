@@ -1,7 +1,5 @@
 <template>
-  <div class="events">
-    <EventCard v-for="event in events" :key="event.id" :event="event" />
-  </div>
+  <h1>Organizer List only</h1>
   <hr />
   <div class="organize">
     <OrganizerCard v-for="event in events" :key="event.id" :value="event" />
@@ -10,12 +8,10 @@
 
 <script>
 // @ is an alias to /src
-import EventCard from "@/components/EventCard.vue"
 import OrganizerCard from "@/components/OrganizerCard.vue"
 export default {
-  name: "Home",
+  name: "OrganizerOnly",
   components: {
-    EventCard,
     OrganizerCard
   },
   data() {
@@ -60,11 +56,6 @@ export default {
 }
 </script>
 <style scoped>
-.events {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 .organize {
   display: flex;
   flex-direction: column;
