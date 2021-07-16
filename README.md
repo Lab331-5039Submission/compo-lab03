@@ -2,6 +2,7 @@
 
 ## This lab topic
 - component props
+- prettierrc file for clean format
 - router/view
 - axios for fetching api
 
@@ -22,5 +23,5 @@ npm run build
 
 ### Lints and fixes files
 ```
-npm run lint
+npm run lint --fix
 ```
